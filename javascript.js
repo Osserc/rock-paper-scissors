@@ -6,7 +6,6 @@ for (let gamesPlayed = 0; gamesPlayed < 5; gamesPlayed++) {
 
     //Computer chooses
     let computerSelection = computerPlay(1, 3);
-    console.log(computerSelection);
 
     //Player chooses
     let playerInput = window.prompt('Rock, paper or scissors?');
