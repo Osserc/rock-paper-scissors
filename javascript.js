@@ -1,7 +1,9 @@
 let gamesWon = 0;
 let gamesLost = 0;
 
-const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListener('click', function handler (e) {
+const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListener('click', playingGame));
+
+function playingGame (e) {
 
     if (e.target.id == 'rock') {
         playerSelection = 1;
@@ -24,7 +26,8 @@ const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListene
 
             container.removeChild(container.lastChild);
             container.appendChild(content);
-            const element = document.querySelectorAll('.btn').forEach(element => element.removeEventListener('click', handler))
+
+            const element = document.querySelectorAll('.btn').forEach(element => element.removeEventListener('click', playingGame))
 
             const reset = document.querySelector('.time-loop');
 
@@ -32,8 +35,11 @@ const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListene
             loop.classList.add('restart');
             loop.textContent = 'Turn back time!';
 
-            reset.removeChild(reset.lastChild),
+            //reset.removeChild(reset.lastChild),
             reset.appendChild(loop);
+
+            const looping = document.querySelector('.restart');
+            looping.addEventListener('click', resetGame);
 
         } else if (gamesLost == 5) {
             const container = document.querySelector('.ongoing');
@@ -44,7 +50,8 @@ const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListene
 
             container.removeChild(container.lastChild);
             container.appendChild(content);
-            const element = document.querySelectorAll('.btn').forEach(element => element.removeEventListener('click', handler))
+
+            const element = document.querySelectorAll('.btn').forEach(element => element.removeEventListener('click', playingGame))
 
             const reset = document.querySelector('.time-loop');
 
@@ -52,12 +59,53 @@ const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListene
             loop.classList.add('restart');
             loop.textContent = 'Turn back time!';
         
-            reset.removeChild(reset.lastChild),
+            //reset.removeChild(reset.lastChild);
             reset.appendChild(loop);
+
+            const looping = document.querySelector('.restart');
+            looping.addEventListener('click', resetGame);
 
         }
 
-}))
+}
+
+function resetGame (e) {
+    gamesWon = 0;
+    gamesLost = 0;
+
+    const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListener('click', playingGame));
+
+    const score = document.querySelector('.score-yours .score-number');
+
+    const point = document.createElement('div');
+    point.classList.add('point');
+    point.textContent = gamesWon;
+
+    score.removeChild(score.lastChild);
+    score.appendChild(point);
+
+    const scoreVeknos = document.querySelector('.score-veknos .score-number');
+
+    const pointVeknos = document.createElement('div');
+    pointVeknos.classList.add('point');
+    pointVeknos.textContent = gamesLost;
+
+    scoreVeknos.removeChild(scoreVeknos.lastChild);
+    scoreVeknos.appendChild(pointVeknos);
+
+    const workAround = document.querySelector('.ongoing');
+
+    const filler = document.createElement('div');
+    filler.classList.add('filler');
+    filler.textContent = '';
+
+    workAround.removeChild(workAround.lastChild);
+    workAround.appendChild(filler);
+
+    const removeButton = document.querySelector('.time-loop');
+    removeButton.removeChild(removeButton.lastChild);
+
+}
 
 function computerPlay(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -100,14 +148,14 @@ function playRound(playerSelection, computerSelection) {
         container.removeChild(container.lastChild);
         container.appendChild(content);
 
-        const score = document.querySelector('.score-veknos .score-number');
+        const scoreVeknos = document.querySelector('.score-veknos .score-number');
 
-        const point = document.createElement('div');
-        point.classList.add('point');
-        point.textContent = gamesLost;
-
-        score.removeChild(score.lastChild);
-        score.appendChild(point);
+        const pointVeknos = document.createElement('div');
+        pointVeknos.classList.add('point');
+        pointVeknos.textContent = gamesLost;
+    
+        scoreVeknos.removeChild(scoreVeknos.lastChild);
+        scoreVeknos.appendChild(pointVeknos);
 
         return gamesLost;
 
