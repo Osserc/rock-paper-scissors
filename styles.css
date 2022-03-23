@@ -3,7 +3,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-image: url(./background-image.jpg);
+    background-image: url(./images/background-image.jpg);
     color: rgb(255, 238, 0);
     font-size: 20px;
     min-height: 100vh;
