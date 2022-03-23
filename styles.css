@@ -4,7 +4,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: url(./background-image.jpg);
-    color: gold;
+    color: rgb(255, 238, 0);
     font-size: 20px;
     min-height: 100vh;
 }
@@ -44,7 +44,7 @@ p {
     margin: 25px 0;
 }
 
-#rock, #paper, #scissors {
+#rock, #paper, #scissors, .restart {
     border-radius: 25px;
     padding: 10px 25px;
     font-size: 20px;
@@ -80,6 +80,11 @@ p {
     color: blue;
 }
 
+.restart {
+    background-color: goldenrod;
+    color: gold;
+}
+
 .selection-inner, .score-yours, .score-veknos {
     display: flex;
     justify-content: center;
@@ -97,6 +102,13 @@ p {
 
 .score-yours .score-number, .score-veknos .score-number {
     font-size: 36px;
+}
+
+.time-loop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
 
 div .content {

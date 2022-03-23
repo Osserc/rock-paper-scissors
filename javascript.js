@@ -1,9 +1,8 @@
-//Setting up variables to count the score
 let gamesWon = 0;
 let gamesLost = 0;
 
 const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListener('click', function handler (e) {
-    console.log(e);
+
     if (e.target.id == 'rock') {
         playerSelection = 1;
     } else if (e.target.id == 'paper') {
@@ -26,6 +25,16 @@ const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListene
             container.removeChild(container.lastChild);
             container.appendChild(content);
             const element = document.querySelectorAll('.btn').forEach(element => element.removeEventListener('click', handler))
+
+            const reset = document.querySelector('.time-loop');
+
+            const loop = document.createElement('button');
+            loop.classList.add('restart');
+            loop.textContent = 'Turn back time!';
+
+            reset.removeChild(reset.lastChild),
+            reset.appendChild(loop);
+
         } else if (gamesLost == 5) {
             const container = document.querySelector('.ongoing');
 
@@ -36,6 +45,16 @@ const btn = document.querySelectorAll('.btn').forEach(btn => btn.addEventListene
             container.removeChild(container.lastChild);
             container.appendChild(content);
             const element = document.querySelectorAll('.btn').forEach(element => element.removeEventListener('click', handler))
+
+            const reset = document.querySelector('.time-loop');
+
+            const loop = document.createElement('button');
+            loop.classList.add('restart');
+            loop.textContent = 'Turn back time!';
+        
+            reset.removeChild(reset.lastChild),
+            reset.appendChild(loop);
+
         }
 
 }))
