@@ -9,11 +9,24 @@
     <title>Rock, paper, scissors</title>
 </head>
 <body>
-    <div><button class="btn" id="rock">Rock</button><button class="btn" id="paper">Paper</button><button class="btn" id="scissors">Scissors</button></div>
-    <div class="results"></div>
-    
-    
-    <div>Soon, the Coliseum shall open! 5-man bands of rogues, wizards and warriors shall face in each other one-on-one in in mortal combat. The team with the last men standing will be the winner!</div>
-    <div>Until then, here's good ol' rock, papers, scissors. Open the console to see the results.</div>
+    <div class="intro"><p>Welcome to the Coliseum, magister!</p>
+        <p>Your three champions will do their best to ensure your triumph against Veknos' goons!</p>
+        <p>Do keep in mind that while they are all great fighters, they all have their own strengths and weaknesses.</p>
+        <p>Warrior excels against rogues, but suffer against mages; rogues are great at taking down wizards but stand no chance when facing a warrior; and while wizards may handily dispatch warriors, they will quickly be brought down by a rogue.</p>
+        <p>The challenge will proceed as follows: each turn, you will select one of your champions to enter the arena, as will Veknos; the first team to reach 5 victories will be declared the winner.</p>
+        <p>But enough talk! Let's get on with the games!</p>
+    </div>
+    <div class="selection"><button class="btn" id="rock">Bad Luck Ichabod</button><button class="btn" id="paper">Sneaky Stu</button><button class="btn" id="scissors">Frobek the Forgetful</button></div>
+    <div class="results">
+        <div class="results-yours">
+            <div>Your team</div>
+            <div>Results</div>
+        </div>
+        <div class="results-veknos">
+            <div>Veknos' team</div>
+            <div>Results</div>
+        </div>
+    </div>
+    <div class="ongoing"></div>
 </body>
 </html>
