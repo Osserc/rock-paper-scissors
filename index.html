@@ -5,28 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="javascript.js" defer></script>
-    <link rel="stylesheet" href="./styles.js"> 
-    <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="./styles.css"> 
+    <title>The Coliseum</title>
 </head>
 <body>
-    <div class="intro"><p>Welcome to the Coliseum, magister!</p>
-        <p>Your three champions will do their best to ensure your triumph against Veknos' goons!</p>
+    <div class="intro"><p class="title"><strong>Welcome to the Coliseum, magister!</strong></p>
+        <p>Your three champions will do their best to defend your honor and ensure your triumph over Veknos' goons!</p>
         <p>Do keep in mind that while they are all great fighters, they all have their own strengths and weaknesses.</p>
-        <p>Warrior excels against rogues, but suffer against mages; rogues are great at taking down wizards but stand no chance when facing a warrior; and while wizards may handily dispatch warriors, they will quickly be brought down by a rogue.</p>
-        <p>The challenge will proceed as follows: each turn, you will select one of your champions to enter the arena, as will Veknos; the first team to reach 5 victories will be declared the winner.</p>
-        <p>But enough talk! Let's get on with the games!</p>
+        <p><span class="warrior"><strong>Warriors</strong></span> excel against <span class="rogue"><strong>rogues</strong></span>, but suffer against <span class="wizard"><strong>wizards</strong></span>; <span class="rogue"><strong>rogues</strong></span> are great at taking down <span class="wizard"><strong>wizards</strong></span> but stand no chance when facing a <span class="warrior"><strong>warrior</strong></span>; and while <span class="wizard"><strong>wizards</strong></span> may handily dispatch <span class="warrior"><strong>warriors</strong></span>, they will quickly be brought down by a <span class="rogue"><strong>rogue</strong></span>.</p>
+        <p>The challenge will proceed as follows: each turn, you will select one of your champions to the arena, as will Veknos; the first team to reach 5 victories will be declared the winner.</p>
+        <p>But enough talk! Let's get on with the trials!</p>
     </div>
-    <div class="selection"><button class="btn" id="rock">Bad Luck Ichabod</button><button class="btn" id="paper">Sneaky Stu</button><button class="btn" id="scissors">Frobek the Forgetful</button></div>
-    <div class="results">
-        <div class="results-yours">
-            <div>Your team</div>
-            <div>Results</div>
+    <div class="grouping">
+        <div class="selection">
+                <div class="selection-inner">
+                    <div class="pic"><img src="./swordsman.png" alt="icon of a swordsman" width="auto" height="150"></div>
+                    <div><button class="btn" id="rock">Bad Luck Ichabod</button></div>
+                </div>
+                <div class="selection-inner">
+                    <div class="pic"><img src="./archer.png" alt="icon of an archer" width="auto" height="150"></div>
+                    <div><button class="btn" id="paper">Sneaky Stu</button></div>
+                </div>
+                <div class="selection-inner">
+                    <div class="pic"><img src="./wizard.png" alt="icon of a wizard" width="auto" height="150"></div>
+                    <div><button class="btn" id="scissors">Frobek the Forgetful</button></div>
+                </div> 
+        </div>      
+        <div class="score">
+            <div class="score-yours">
+                <div class="score-name">Your team</div>
+                <div class="score-number">0</div>
+            </div>
+            <div class="score-veknos">
+                <div class="score-name">Veknos' team</div>
+                <div class="score-number">0</div>
+            </div>
         </div>
-        <div class="results-veknos">
-            <div>Veknos' team</div>
-            <div>Results</div>
+        <div class="ongoing">
+            <div class="placeholder"></div
+        ></div>
+    </div>
+    <div class="credits">
+        <div><strong>Credits</strong></div>
+        <div>
+            <ul>
+                <li><a href="https://www.flaticon.com/free-icons/archer" title="archer icons">Archer icons created by Freepik - Flaticon</a></li>
+                <li><a href="https://www.flaticon.com/free-icons/warrior" title="warrior icons">Warrior icons created by max.icons - Flaticon</a></li>
+                <li><a href="https://www.flaticon.com/free-icons/wizard" title="wizard icons">Wizard icons created by Freepik - Flaticon</a></li>
+                <li>Background photo by <a href="https://unsplash.com/@benostrower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ben Ostrower</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></li>
+            </ul>
+        </div>    
         </div>
     </div>
-    <div class="ongoing"></div>
 </body>
 </html>

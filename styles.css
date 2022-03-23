@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./background-image.jpg);
+    color: gold;
+    font-size: 20px;
+    min-height: 100vh;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 1400px;
+}
+
+p {
+    margin: 8px;
+}
+
+.title {
+    font-size: 46px;
+}
+
+.grouping {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.selection, .score {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+}
+
+.selection {
+    margin: 25px 0;
+}
+
+#rock, #paper, #scissors {
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-width: 5px;
+    border-color: gold;
+}
+
+#rock {
+    color: red;
+    background-color: darksalmon;
+}
+
+.warrior {
+    color: red;
+}
+
+#paper {
+    color: green;
+    background-color: lightgreen;
+}
+
+.rogue {
+    color: green;
+}
+
+#scissors {
+    color: blue;
+    background-color: lightskyblue;
+}
+
+.wizard {
+    color: blue;
+}
+
+.selection-inner, .score-yours, .score-veknos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score {
+    margin-bottom: 20px;
+}
+
+.score-name {
+    font-size: 48px;
+}
+
+.score-yours .score-number, .score-veknos .score-number {
+    font-size: 36px;
+}
+
+div .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    font-size: 12px;
+}
+
+li {
+    display: inline-block;
+    margin: 0 5px;
+}
